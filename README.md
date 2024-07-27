@@ -88,34 +88,34 @@ In exploring the tables within the database, the table was selected to view the 
 
     ![image](https://github.com/user-attachments/assets/858fdff8-e6f8-401a-a85a-0a9c2e96afd5)
 
-    - Problem 3: Which schools have highest Safety Score?
+ - Problem 3: Which schools have highest Safety Score?
 
-      In tackling this problem, I issued the following query:
+   In tackling this problem, I issued the following query:
 
-      SELECT name_of_school, safety_score
-      FROM chicago_public_schools
-      ORDER BY safety_score DESC;
+   SELECT name_of_school, safety_score
+   FROM chicago_public_schools
+   ORDER BY safety_score DESC;
 
-      ![image](https://github.com/user-attachments/assets/17e6a4a5-2082-4c91-b75d-d22a85ecfbb9)
+   ![image](https://github.com/user-attachments/assets/17e6a4a5-2082-4c91-b75d-d22a85ecfbb9)
 
-      Alternatively, with the query below, I was able to retrieve schools with highest saftey score:
+   Alternatively, with the query below, I was able to retrieve schools with highest saftey score:
 
-      SELECT name_of_school, safety_score
-      FROM chicago_public_schools
-      WHERE safety_score = (SELECT MAX(safety_score) FROM chicago_public_schools);
+   SELECT name_of_school, safety_score
+   FROM chicago_public_schools
+   WHERE safety_score = (SELECT MAX(safety_score) FROM chicago_public_schools);
 
-      ![image](https://github.com/user-attachments/assets/59ad5859-b53c-496d-a3cc-cdde94326e16)
+   ![image](https://github.com/user-attachments/assets/59ad5859-b53c-496d-a3cc-cdde94326e16)
 
-    - Problem 4: What are the top 10 schools with the highest “Average Student Attendance”?
+   - Problem 4: What are the top 10 schools with the highest “Average Student Attendance”?
    
-      In tackling this problem, I issued the following query:
+     In tackling this problem, I issued the following query:
       
-      SELECT name_of_school, average_student_attendance
-      FROM chicago_public_schools
-      ORDER BY average_student_attendance DESC
-      LIMIT 10;
+     SELECT name_of_school, average_student_attendance
+     FROM chicago_public_schools
+     ORDER BY average_student_attendance DESC
+     LIMIT 10;
 
-      ![image](https://github.com/user-attachments/assets/db4bdc75-a69f-4f67-ad82-fecf2c732d72)
+     ![image](https://github.com/user-attachments/assets/db4bdc75-a69f-4f67-ad82-fecf2c732d72)
 
     - Problem 5: Retrieve the list of 5 Schools with the lowest Average Student Attendance sorted in ascending order based on attendance
    
@@ -139,9 +139,9 @@ In exploring the tables within the database, the table was selected to view the 
       
       ![image](https://github.com/user-attachments/assets/c6bde3f7-3ec0-4f21-86d8-54e05132c0af)
 
-      - Problem 7: Which Schools have Average Student Attendance lower than 70%?
+    - Problem 7: Which Schools have Average Student Attendance lower than 70%?
 
-        In tackling this problem, I issued the following query:
+      In tackling this problem, I issued the following query:
 
         SELECT name_of_school, average_student_attendance
         FROM chicago_public_schools
@@ -149,7 +149,7 @@ In exploring the tables within the database, the table was selected to view the 
 
         ![image](https://github.com/user-attachments/assets/44c24341-5214-4269-bb68-86c7df45e6e6)
 
-        - Problem 8: Get the total College Enrollment for each Community Area
+    - Problem 8: Get the total College Enrollment for each Community Area
 
           In tackling this problem, I issued the following query:
 
@@ -159,7 +159,7 @@ In exploring the tables within the database, the table was selected to view the 
 
           ![image](https://github.com/user-attachments/assets/9c178e96-353d-4695-8d46-32c889c2a63d)
 
-        - Problem 9: Get the 5 Community Areas with the least total College Enrollment sorted in ascending order
+    - Problem 9: Get the 5 Community Areas with the least total College Enrollment sorted in ascending order
        
           In tackling this problem, I issued the following query:
 
@@ -171,7 +171,7 @@ In exploring the tables within the database, the table was selected to view the 
 
           ![image](https://github.com/user-attachments/assets/e8ffa4c1-40f8-41e5-90d0-4a1b36da6bdb)
 
-          - Problem 10: List 5 schools with lowest safety score.
+    - Problem 10: List 5 schools with lowest safety score.
 
             In tackling this problem, I issued the following query:
 
@@ -182,9 +182,15 @@ In exploring the tables within the database, the table was selected to view the 
 
             ![image](https://github.com/user-attachments/assets/0007d610-d28b-4ab0-8312-cc15a2d2f0cc)
        
-           - Problem 11: Get the hardship index for the community area which has College Enrollment of 4368
+     - Problem 11: Get the hardship index for the community area which has College Enrollment of 4368
 
              In tackling this problem, I issued the following query:
+
+             SELECT community_area_number, community_area_name, hardship_index
+             FROM chicago_socioeconomic_data
+             WHERE community_area_number = (SELECT community_area_number FROM chicago_public_schools) WHERE college_enrollment = 4368
+       
+
 
              
 
