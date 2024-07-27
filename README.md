@@ -214,6 +214,58 @@ In tackling this problem, I issued the following query:
 
   ![image](https://github.com/user-attachments/assets/00d9437e-a488-46f2-ae25-3fe2bc6c3ff0)
 
+- Problem 13: Find the total number of crimes recorded in the CRIME table.
+
+In tackling this problem, I issued the following query:
+
+          SELECT * FROM 
+
+
+- Problem 14: Retrieve first 10 rows from the CRIME table.
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 15: How many crimes involve an arrest?
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 16: Which unique types of crimes have been recorded at GAS STATION locations?
+
+In tackling this problem, I issued the following query:
+
+
+
+- Problem 17: In the CENUS_DATA table list all Community Areas whose names start with the letter ‘B’.
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 18: Which schools in Community Areas 10 to 15 are healthy school certified?
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 19: What is the average school Safety Score?
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 20: List the top 5 Community Areas by average College Enrollment [number of students]
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 21: Use a sub-query to determine which Community Area has the least value for school Safety Score?
+
+In tackling this problem, I issued the following query:
+
+
+- Problem 22:[Without using an explicit JOIN operator] Find the Per Capita Income of the Community Area which has a school Safety Score of 1.
+
+In tackling this problem, I issued the following query:
+
 
           
           
