@@ -308,10 +308,16 @@ In tackling this problem, I issued the following query:
 
 In tackling this problem, I issued the following query:
 
-          SELECT 
+           SELECT per_capita_income
+           FROM chicago_socioeconomic_data
+           WHERE CAST(community_area_number AS INTEGER) = (
+                                                          SELECT CAST(community_area_number AS INTEGER)
+                                                          FROM chicago_public_schools
+                                                          WHERE CAST(safety_score AS INTEGER) = 1
+                                                          );
           
-          
-      
+![image](https://github.com/user-attachments/assets/b005ac3f-7fc0-4160-963b-8023a868f423)
+
 
 
 
