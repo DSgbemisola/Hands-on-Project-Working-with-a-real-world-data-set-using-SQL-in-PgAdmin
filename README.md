@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f60a2b36-0090-44ba-8a96-bbbe36794825)# Hands-on-Project-Working-with-a-real-world-data-set-using-SQL-in-PgAdmin
+# Hands-on-Project-Working-with-a-real-world-data-set-using-SQL-in-PgAdmin
 
 This is a Hands-on Project working with a real world data-set using SQL in PgAdmin
 
@@ -276,22 +276,39 @@ In tackling this problem, I issued the following query:
 
 In tackling this problem, I issued the following query:
 
+          SELECT AVG(CAST(safety_score AS NUMERIC)) AS average_safety_score
+          FROM chicago_public_schools;
+
+![image](https://github.com/user-attachments/assets/ff07469a-367b-4281-a376-581ea87e980e)
 
 - Problem 20: List the top 5 Community Areas by average College Enrollment [number of students]
 
 In tackling this problem, I issued the following query:
 
+          SELECT community_area_name, AVG(college_enrollment) AS average_college_enrollment
+          FROM chicago_public_schools
+          GROUP BY community_area_name
+          ORDER BY average_college_enrollment DESC
+          LIMIT 5;
+
+![image](https://github.com/user-attachments/assets/70e948c2-aa76-476e-87fe-fb83c77e35cb)
 
 - Problem 21: Use a sub-query to determine which Community Area has the least value for school Safety Score?
 
 In tackling this problem, I issued the following query:
 
+          SELECT community_area_name 
+          FROM chicago_public_schools 
+          WHERE safety_score = (SELECT MIN(safety_score)
+                               FROM chicago_public_schools);
+
+![image](https://github.com/user-attachments/assets/abf96ec9-4376-4d8f-9111-b8db3b65c102)
 
 - Problem 22:[Without using an explicit JOIN operator] Find the Per Capita Income of the Community Area which has a school Safety Score of 1.
 
 In tackling this problem, I issued the following query:
 
-
+          SELECT 
           
           
       
