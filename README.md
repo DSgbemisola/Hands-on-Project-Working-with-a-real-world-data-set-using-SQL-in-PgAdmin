@@ -1,4 +1,4 @@
-# Hands-on-Project-Working-with-a-real-world-data-set-using-SQL-in-PgAdmin
+![image](https://github.com/user-attachments/assets/f60a2b36-0090-44ba-8a96-bbbe36794825)# Hands-on-Project-Working-with-a-real-world-data-set-using-SQL-in-PgAdmin
 
 This is a Hands-on Project working with a real world data-set using SQL in PgAdmin
 
@@ -218,33 +218,58 @@ In tackling this problem, I issued the following query:
 
 In tackling this problem, I issued the following query:
 
-          SELECT * FROM 
-
+          SELECT COUNT(*)AS total_number_of_crime
+          FROM chicago_crime
+          WHERE primary_type IS NOT NULL;
+         
+![image](https://github.com/user-attachments/assets/2ee096b6-d1ba-44b6-9718-d2cd9f36448d)
 
 - Problem 14: Retrieve first 10 rows from the CRIME table.
 
 In tackling this problem, I issued the following query:
 
+          SELECT * FROM chicago_crime
+          LIMIT 10;
+
+![image](https://github.com/user-attachments/assets/30da3c05-0564-455e-8342-42c3b16390e6)
 
 - Problem 15: How many crimes involve an arrest?
 
 In tackling this problem, I issued the following query:
 
+            SELECT COUNT(arrest) AS number_of_arrest FROM chicago_crime
+            WHERE arrest = 'TRUE';
+
+  ![image](https://github.com/user-attachments/assets/9ebf4af5-0462-4edb-a059-0ac0c50e57a3) 
 
 - Problem 16: Which unique types of crimes have been recorded at GAS STATION locations?
 
 In tackling this problem, I issued the following query:
 
+          SELECT DISTINCT(primary_type), location_description
+          FROM chicago_crime
+          WHERE location_description = 'GAS STATION';
 
+![image](https://github.com/user-attachments/assets/e0f7897a-68e8-48c7-b973-8e47ff2b0b44)
 
-- Problem 17: In the CENUS_DATA table list all Community Areas whose names start with the letter ‘B’.
+- Problem 17: In the chicago_socioeconomic_data list all Community Areas whose names start with the letter ‘B’.
 
 In tackling this problem, I issued the following query:
 
+          SELECT community_area_name FROM chicago_socioeconomic_data
+          WHERE community_area_name LIKE 'B%';
+
+![image](https://github.com/user-attachments/assets/873767c5-b402-427b-a46c-5140cf202d65)
 
 - Problem 18: Which schools in Community Areas 10 to 15 are healthy school certified?
 
 In tackling this problem, I issued the following query:
+
+          SELECT name_of_school, community_area_number
+          FROM chicago_public_schools
+          WHERE community_area_number BETWEEN 10 AND 15 AND (healthy_school_certified = 'Yes');
+
+![image](https://github.com/user-attachments/assets/4448b0dd-9f22-4ae1-9990-e5b2d46817da)
 
 
 - Problem 19: What is the average school Safety Score?
