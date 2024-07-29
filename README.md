@@ -1,4 +1,4 @@
-# Final-Project-Working-with-a-real-world-data-set-using-SQL-in-PgAdmin
+# Final Project: Working with a real-world data set using SQL in PgAdmin
 
 This is a hands-on Project working with a real world data-set using SQL in PgAdmin
 
