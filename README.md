@@ -33,7 +33,6 @@ a. The new database named "ChicagoDB" was created in PgAdmin and the 3 tables we
 
 3.Chicago_socioeconomic_create_query_script: https://drive.google.com/file/d/1AoLeFsOOvERw1PNYBHmXUJQ18DxCqtx9/view?usp=sharing
 
-
 b. After the 3 tables had been successfully created within the Chicago database, The 3 datasets were downloaded and imported into the already created tables as CSV files.
 
 1. Chicago_public_schools_data - file can be downloaded here: https://drive.google.com/file/d/1vUT6RHg869rMTiy0ML-vWuyPW7fRu2m9/view?usp=sharing
@@ -68,7 +67,7 @@ In exploring the tables within the database, the table was selected to view the 
 
 ![image](https://github.com/user-attachments/assets/1bb622f2-b7ee-49ce-b0be-048f991b918b)
 
-# Task C: Tackling real problem using SQL queries. 
+# Task C: Tackling real problems using SQL queries. 
 
 - Problem 1: How many Elementary Schools are in the dataset?
 
