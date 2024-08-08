@@ -59,11 +59,11 @@ In exploring the tables within the database, the table was selected to view the 
 
 ![image](https://github.com/user-attachments/assets/43cf21df-46b3-4075-bf29-d506438b351b)
 
-3. Chicago_crime_table
+2. Chicago_crime_table
 
 ![image](https://github.com/user-attachments/assets/ffdbaa69-b85e-415e-9f61-1c1cfb8314cc)
 
-5. Chicago_socioeconomic_table
+3. Chicago_socioeconomic_table
 
 ![image](https://github.com/user-attachments/assets/1bb622f2-b7ee-49ce-b0be-048f991b918b)
 
